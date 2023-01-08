@@ -1,13 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './styles/App.css';
+import {
+  Route,
+  Routes
+} from "react-router-dom";
 
-function App() {
+import { Home } from './pages/Home';
+import { Todo } from './pages/Todo';
+
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/todo" element={<Todo/>} />
+      </Routes>
   );
 }
 
